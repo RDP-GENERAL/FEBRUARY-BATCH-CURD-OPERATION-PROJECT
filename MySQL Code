@@ -1,0 +1,24 @@
+create database feb_project_2025;
+use feb_project_2025;
+show tables;
+
+CREATE TABLE cust_credentials (
+    cust_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    address VARCHAR(255) not null,
+    phone_number VARCHAR(15) not null,
+    user_name VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+)AUTO_INCREMENT=1000;
+
+describe cust_credentials;
+
+INSERT INTO cust_credentials (full_name, address, phone_number, user_name, password)
+VALUES ('Rajdeep Ghosh', '123 Lakeview Road, Kolkata', '+91-9876543210', 'rajdeep2025', 'secure@123');
+
+select * from cust_credentials;
+
+select * from cust_credentials
+where user_name="Raj@8890";
+
+select * from cust_credentials WHERE user_name='Raj@8899'
